@@ -25,6 +25,7 @@ The second MapReduce program (MRdriver.java, MRmapper2.java, and MRreducer2.java
 Note: acct must be replaced by each user name as defined in the "acct" field of the USER_LOGIN record. In other words, there will be multiple output lines for the num_sigmas_for:acct statistic (one per user name with failed logins).
 
 3. Output
+
 Output should be something like this:
 Detected Anomaly for user: num_sigmas_for: “abc”  with score: 3.456
 
