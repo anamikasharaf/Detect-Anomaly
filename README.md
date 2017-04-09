@@ -11,6 +11,7 @@ Detect Anomalous Failed Login Behavior
 1. MapReduce Program 1
 
 	The first MapReduce program (MRdriver.java, MRmapper1.java, and MRreducer1.java) will calculate the following     	  statistic:
+		
 		•	failed_login_attempts_for_acct
 
 	Note: acct must be replaced by each user name as defined in the "acct" field of the USER_LOGIN record. In other words, 	       there will be multiple output lines for the failed_login_attempts_for_acct statistic (one per user name with failed 	   logins).
@@ -18,6 +19,7 @@ Detect Anomalous Failed Login Behavior
 2. MapReduce Program 2
 
 	The second MapReduce program (MRdriver.java, MRmapper2.java, and MRreducer2.java)  will calculate the following 	statistics:
+		
 		•	mean_failed_login_attempts
 		•	sigma_failed_login_attempts
 		•	num_sigmas_for:acct
