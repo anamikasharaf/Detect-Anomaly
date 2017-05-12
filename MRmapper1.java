@@ -31,9 +31,5 @@ public class MRmapper1  extends Mapper <LongWritable,Text,Text,IntWritable> {
 					}
 					
 				}
-
-	// TODO: discard records with acct name that do NOT have ""
-
-	// TODO: write (acctname, 1) to context
 	}
 	}
