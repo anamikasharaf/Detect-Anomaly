@@ -11,7 +11,6 @@ import org.apache.hadoop.conf.Configured;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-//import java.nio.file.FileSystem;
 import java.io.InputStreamReader;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.io.Text;
@@ -97,14 +96,15 @@ public class MRdriver extends Configured implements Tool {
 
 		while((currentline = br.readLine())!= null)
 		{
-			//System.out.println(currentline);
-			
 			String[] tempArray = currentline.split("\\s+");
 			String string_sigma = tempArray[1];
 			double sigmacheck = Double.parseDouble(string_sigma);
 			count++;
+			
+			 // TODO: for each user with score higher than threshold, print to screen:
 			if( sigmacheck > sigma_thershold && count >2 )
 			{
+				// detected anomaly for user: <username>  with score: <numSigmas>
 				String message = ("detected anomaly for user:" + tempArray[0] + "with score:" + sigmacheck); 
 				System.out.println(message);
 			}
@@ -115,10 +115,6 @@ public class MRdriver extends Configured implements Tool {
 		e.printStackTrace();
 	}
 
-      // TODO: for each user with score higher than threshold, print to screen:
-
-      // detected anomaly for user: <username>  with score: <numSigmas>
-
 return 0;   
 }
 
@@ -128,14 +124,14 @@ return 0;
 		   System.exit(1);
 	   }
 	   // check sigma_int_threshold is an int
-	 try {
+	   try {
 		  Integer.parseInt(args[3]);
-	  }
-	  catch (NumberFormatException e) {
+	   }
+	   catch (NumberFormatException e) {
 		  System.err.println(e.getMessage());
 		  System.exit(1);
-	  }
-      Configuration conf = new Configuration();
-      System.exit(ToolRunner.run(conf, new MRdriver(), args));
+	   }
+           Configuration conf = new Configuration();
+           System.exit(ToolRunner.run(conf, new MRdriver(), args));
    } 
 }
