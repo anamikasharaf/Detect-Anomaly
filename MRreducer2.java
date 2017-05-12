@@ -1,3 +1,10 @@
+/**
+ * @author Anamika Sharaf
+ * @date April 7, 2017
+ * 
+ */
+
+
 package Lab1;
 
 import org.apache.hadoop.mapreduce.Reducer;
@@ -56,8 +63,6 @@ public class MRreducer2  extends Reducer <Text,Text,Text,DoubleWritable> {
 			context.write(new Text(message), new DoubleWritable(number));
 			
 		}
-
-	// TODO: calculate num_sigmas_for:<user> and write to context
 		
    }
 }
