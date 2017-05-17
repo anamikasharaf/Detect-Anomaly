@@ -84,7 +84,7 @@ public class MRdriver extends Configured implements Tool {
 
       // TODO: detect anomaly based on sigma_threshold provided by user
 	try {	
-		Path outputfile_path = new Path("/user/user01/LAB1/OUT2/part-r-00000"); 
+		Path outputfile_path = new Path(args[3]); 
 		FileSystem file_sys = FileSystem.get(new Configuration());
 		BufferedReader br = new BufferedReader(new InputStreamReader(file_sys.open(outputfile_path)));
 	
