@@ -5,8 +5,8 @@ README
 
 Detect Anomalous Failed Login Behavior
 
-	Given an audit log with multiple types of records, we are interested in those records of type USER_LOGIN (the rest you 	       should discard). 
-	The output of the program should be the list of users whose anomaly score is higher than the threshold specified by 	    the user at the command line.
+	Given an audit log with multiple types of records, we are interested in those records of type USER_LOGIN (the rest you should discard). 
+	The output of the program should be the list of users whose anomaly score is higher than the threshold specified by the user at the command line.
 
 1. MapReduce Program 1
 
