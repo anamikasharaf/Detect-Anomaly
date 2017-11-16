@@ -20,7 +20,7 @@ import java.util.List;
 public class MRreducer2  extends Reducer <Text,Text,Text,DoubleWritable> {
    public void reduce(Text key, Iterable<Text> values, Context context) 
 		   throws IOException, InterruptedException {
-	// TODO: parse out (key, values) (based on hint of cleverness mapper)
+	// TODO: parse out (key, values)
 		int count =0;
 		double sum = 0;
 		double mean = 0;
