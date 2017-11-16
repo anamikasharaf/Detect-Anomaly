@@ -17,7 +17,7 @@ public class MRmapper2  extends Mapper <LongWritable,Text,Text,Text> {
 	public void map(LongWritable key, Text value, Context context) 
 			throws IOException, InterruptedException {
 
-	// TODO: write (key, value) pair to context (hint: need to be clever here)
+	        //write (key, value) pair to context
 		
 		String line = value.toString();
 		String[] split_value = line.split("\\s+");
