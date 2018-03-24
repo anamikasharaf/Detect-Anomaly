@@ -20,7 +20,7 @@ import java.util.List;
 public class MRreducer2  extends Reducer <Text,Text,Text,DoubleWritable> {
    public void reduce(Text key, Iterable<Text> values, Context context) 
 		   throws IOException, InterruptedException {
-	// TODO: parse out (key, values)
+	// parse out (key, values)
 		int count =0;
 		double sum = 0;
 		double mean = 0;
@@ -41,11 +41,11 @@ public class MRreducer2  extends Reducer <Text,Text,Text,DoubleWritable> {
 		}
 		
 
-	// TODO: calculate mean_failed_login_attempts and write to context
+	// calculate mean_failed_login_attempts and write to context
 		
 		mean = sum/count;
 		
-	// TODO: calculate sigma_failed_login_attempts and write to context
+	// calculate sigma_failed_login_attempts and write to context
 
 		for(int i = 0; i< temp_name.size(); i++){
 			xi = (temp_value.get(i)) - mean;
