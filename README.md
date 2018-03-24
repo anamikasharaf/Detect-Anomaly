@@ -2,12 +2,12 @@
 
 Detect Anomalous Failed Login Behavior with MapReduce
 
-# Objective
+# Objective:
 
 Given an audit log with multiple types of records, we are interested in those records of type USER_LOGIN. 
 The output of the program should be the list of users whose anomaly score is higher than the threshold specified by the user at the command line.
 
-# Data
+# Data:
 Here is a sample failed USER_LOGIN record:
 
 type=USER_LOGIN msg=audit(1453738391.690:107584): user pid=23159 uid=0 auid=4294967295 ses=4294967295 msg='op=login acct="simth" exe="/usr/sbin/sshd" hostname=? addr=10.20.30.200 terminal=ssh res=failed' 
