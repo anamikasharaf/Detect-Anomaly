@@ -16,7 +16,7 @@ import java.util.StringTokenizer;
 
 public class MRmapper1  extends Mapper <LongWritable,Text,Text,IntWritable> {
 	public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-	// TODO: filter failed USER_LOGIN records, discard the rest
+				// filter failed USER_LOGIN records, discard the rest
 		
 		 		String[] temp = value.toString().split(" ");
 				if(temp[0].equals("type=USER_LOGIN") && temp[13].equals("res=failed'"))
