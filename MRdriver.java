@@ -29,7 +29,7 @@ public class MRdriver extends Configured implements Tool {
 
    public int run(String[] args) throws Exception {
 
-      // TODO: configure first MR job 
+      // configure first MR job 
  
          Job job = new Job(getConf(), "Lab1"); 
          job.setJarByClass(MRdriver.class);
@@ -37,7 +37,7 @@ public class MRdriver extends Configured implements Tool {
 	 job.setReducerClass(MRreducer1.class);
 	// job.setNumReduceTasks(0);
 	
-      // TODO: setup input and output paths for first MR job
+      // setup input and output paths for first MR job
 
 	 job.setInputFormatClass(TextInputFormat.class);
 	 job.setOutputKeyClass(Text.class);
@@ -47,14 +47,14 @@ public class MRdriver extends Configured implements Tool {
      
 	 	
 
-      // TODO: run first MR job syncronously with verbose output set to true
+      // run first MR job syncronously with verbose output set to true
 
 	 FileInputFormat.addInputPath(job, new Path(args[0]));
 	 FileOutputFormat.setOutputPath(job, new Path(args[1]));
 	 job.waitForCompletion(true);
        	// return job.waitForCompletion(true) ? 0 : 1; 
 
-      // TODO: configure the second MR job 
+      // configure the second MR job 
 
 	 Job job1 = new Job(getConf(), "Lab1");
 	 job1.setJarByClass(MRdriver.class);
@@ -64,7 +64,7 @@ public class MRdriver extends Configured implements Tool {
 
 
 		
-      // TODO: setup input and output paths for second MR job
+      // setup input and output paths for second MR job
 
 	 job1.setInputFormatClass(TextInputFormat.class);
 	 job1.setOutputKeyClass(Text.class);
@@ -73,7 +73,7 @@ public class MRdriver extends Configured implements Tool {
 	 job1.setMapOutputValueClass(Text.class);
 
 
-      // TODO: run second MR job syncronously with verbose output set to true
+      // run second MR job syncronously with verbose output set to true
 
 	 FileInputFormat.addInputPath(job1, new Path(args[1]));
 	 FileOutputFormat.setOutputPath(job1, new Path(args[2]));
@@ -82,7 +82,7 @@ public class MRdriver extends Configured implements Tool {
 
 
 
-      // TODO: detect anomaly based on sigma_threshold provided by user
+      //detect anomaly based on sigma_threshold provided by user
 	try {	
 		Path outputfile_path = new Path(args[2]); 
 		FileSystem file_sys = FileSystem.get(new Configuration());
@@ -101,7 +101,7 @@ public class MRdriver extends Configured implements Tool {
 			double sigmacheck = Double.parseDouble(string_sigma);
 			count++;
 			
-			 // TODO: for each user with score higher than threshold, print to screen:
+			 // for each user with score higher than threshold, print to screen:
 			if( sigmacheck > sigma_thershold && count >2 )
 			{
 				// detected anomaly for user: <username>  with score: <numSigmas>
