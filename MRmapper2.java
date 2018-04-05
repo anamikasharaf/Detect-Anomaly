@@ -1,5 +1,3 @@
-
-
 package Lab1;
 
 import org.apache.hadoop.mapreduce.Mapper;
