@@ -2,12 +2,12 @@
 
 Detect Anomalous Failed Login Behavior with MapReduce
 
-# Objective:
+## Objective:
 
 Given an audit log with multiple types of records, we are interested in those records of type USER_LOGIN. 
 The output of the program should be the list of users whose anomaly score is higher than the threshold specified by the user at the command line.
 
-# Data:
+## Data:
 Here is a sample failed USER_LOGIN record:
 
 type=USER_LOGIN msg=audit(1453738391.690:107584): user pid=23159 uid=0 auid=4294967295 ses=4294967295 msg='op=login acct="simth" exe="/usr/sbin/sshd" hostname=? addr=10.20.30.200 terminal=ssh res=failed' 
@@ -21,14 +21,14 @@ type=USER_LOGIN msg=audit(1456937762.214:56406): user pid=6548 uid=0 auid=496 se
 NOTE: this is a successful login attempt by a user with id=496. Also note that the successful USER_LOGIN record contains an id in the msg, NOT an acct.
 
 
-## 1. MapReduce Program 1
+### 1. MapReduce Program 1
 
 	The first MapReduce program (MRdriver.java, MRmapper1.java, and MRreducer1.java) will calculate the following     	  statistic:
 		
 		•	failed_login_attempts_for_acct
 
 
-## 2. MapReduce Program 2
+### 2. MapReduce Program 2
 
 	The second MapReduce program (MRdriver.java, MRmapper2.java, and MRreducer2.java)  will calculate the following 	statistics:
 		
@@ -37,7 +37,7 @@ NOTE: this is a successful login attempt by a user with id=496. Also note that t
 		•	num_sigmas_for:acct
  
 
-## Output
+### Output
 
 	Output should be:
 	
