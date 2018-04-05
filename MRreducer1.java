@@ -1,6 +1,3 @@
-
-
-
 package Lab1;
 
 import org.apache.hadoop.mapreduce.Reducer;
