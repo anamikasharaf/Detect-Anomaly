@@ -1,8 +1,3 @@
-/**
- * @author Anamika Sharaf
- * @date April 7, 2017
- * 
- */
 
 
 package Lab1;
