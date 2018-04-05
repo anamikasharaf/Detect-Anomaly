@@ -1,10 +1,3 @@
-/**
- * @author Anamika Sharaf
- * @date April 7, 2017
- * 
- */
-
-
 package Lab1;
 
 import org.apache.hadoop.mapreduce.Reducer;
