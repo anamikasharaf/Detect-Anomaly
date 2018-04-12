@@ -23,14 +23,14 @@ NOTE: this is a successful login attempt by a user with id=496. Also note that t
 
 ### 1. MapReduce Program 1
 
-	The first MapReduce program (MRdriver.java, MRmapper1.java, and MRreducer1.java) will calculate the following     	  statistic:
+	The first MapReduce program (MRdriver.java, MRmapper1.java, and MRreducer1.java) will calculate the following statistic:
 		
 		•	failed_login_attempts_for_acct
 
 
 ### 2. MapReduce Program 2
 
-	The second MapReduce program (MRdriver.java, MRmapper2.java, and MRreducer2.java)  will calculate the following 	statistics:
+	The second MapReduce program (MRdriver.java, MRmapper2.java, and MRreducer2.java)  will calculate the following statistics:
 		
 		•	mean_failed_login_attempts
 		•	sigma_failed_login_attempts
